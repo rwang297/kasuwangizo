@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import StatsSection from '@/components/StatsSection';
 import FeaturesSection from '@/components/FeaturesSection';
+import StepsSection from '@/components/StepsSection';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <StatsSection />
       <FeaturesSection />
+      <StepsSection />
     </div>
   );
 }
