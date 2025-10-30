@@ -8,6 +8,7 @@ import AboutSection from '@/components/AboutSection';
 import StepsSection from '@/components/StepsSection';
 import BusinessShowcaseSection from '@/components/BusinessShowcaseSection';
 import CTASection from '@/components/CTASection';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <StepsSection />
       <BusinessShowcaseSection />
       <CTASection />
+      <Footer />
     </div>
   );
 }
