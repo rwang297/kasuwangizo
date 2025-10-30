@@ -62,12 +62,21 @@ export default function StepsSection() {
         </div>
 
         {/* Steps Container */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-4">
           {steps.map((step, index) => (
-            <div key={index} className="flex flex-col items-center flex-1">
+            <div key={index} className="flex flex-col items-center relative">
+              {/* Connector Line */}
+              {index < steps.length - 1 && (
+                <div className="hidden md:block absolute top-8 -right-4 w-8 h-1 bg-gray-300">
+                  <span className="absolute -right-3 top-1/2 -translate-y-1/2 text-gray-300 text-2xl">
+                    —
+                  </span>
+                </div>
+              )}
+
               {/* Step Container */}
               <div
-                className={`flex flex-col items-center transform transition-all duration-700 ${
+                className={`flex flex-col items-center w-full transform transition-all duration-700 ${
                   isVisible
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-8'
@@ -92,17 +101,10 @@ export default function StepsSection() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 text-center text-sm leading-relaxed max-w-xs">
+                <p className="text-gray-600 text-center text-sm leading-relaxed">
                   {step.description}
                 </p>
               </div>
-
-              {/* Connector Line (Desktop only, between steps) */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:flex items-center justify-center w-12 h-1 bg-gradient-to-r from-gray-300 to-gray-300 absolute right-0 lg:-mr-6 lg:ml-4">
-                  <span className="text-gray-400 text-xl font-light">—</span>
-                </div>
-              )}
             </div>
           ))}
         </div>
