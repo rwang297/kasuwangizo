@@ -6,7 +6,7 @@ export default function StepsSection() {
   const steps = [
     {
       number: '01',
-      icon: '��',
+      icon: '👤',
       title: 'Sign Up & Create Profile',
       description:
         'Register your business with basic information and create your professional profile',
@@ -62,9 +62,9 @@ export default function StepsSection() {
         </div>
 
         {/* Steps Container */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-0">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-4">
           {steps.map((step, index) => (
-            <div key={index} className="flex flex-col items-center flex-1 relative">
+            <div key={index} className="flex flex-col items-center flex-1">
               {/* Step Container */}
               <div
                 className={`flex flex-col items-center transform transition-all duration-700 ${
@@ -99,14 +99,8 @@ export default function StepsSection() {
 
               {/* Connector Line (Desktop only, between steps) */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-8 left-1/2 w-20 h-1 bg-gray-300 -ml-10">
-                  <style>{`
-                    @media (min-width: 1024px) {
-                      div:nth-child(${index + 1}) ~ div .connector {
-                        display: none;
-                      }
-                    }
-                  `}</style>
+                <div className="hidden lg:flex items-center justify-center w-12 h-1 bg-gradient-to-r from-gray-300 to-gray-300 absolute right-0 lg:-mr-6 lg:ml-4">
+                  <span className="text-gray-400 text-xl font-light">—</span>
                 </div>
               )}
             </div>
