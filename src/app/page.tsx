@@ -7,6 +7,7 @@ import FeaturesSection from '@/components/FeaturesSection';
 import AboutSection from '@/components/AboutSection';
 import StepsSection from '@/components/StepsSection';
 import BusinessShowcaseSection from '@/components/BusinessShowcaseSection';
+import CTASection from '@/components/CTASection';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <AboutSection />
       <StepsSection />
       <BusinessShowcaseSection />
+      <CTASection />
     </div>
   );
 }
