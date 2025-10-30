@@ -1,3 +1,7 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+
 export default function StatsSection() {
   const stats = [
     {
@@ -22,14 +26,45 @@ export default function StatsSection() {
     },
   ];
 
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-20 px-6 bg-white" ref={sectionRef}>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <div key={index} className="flex flex-col items-center text-center">
+            <div
+              key={index}
+              className={`flex flex-col items-center text-center transform transition-all duration-700 ${
+                isVisible
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-8'
+              }`}
+              style={{
+                transitionDelay: isVisible ? `${index * 100}ms` : '0ms',
+              }}
+            >
               {/* Icon Circle */}
-              <div className="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center mb-4">
+              <div className="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center mb-4 hover:scale-110 transition-transform duration-300">
                 <span className="text-2xl">{stat.icon}</span>
               </div>
 
