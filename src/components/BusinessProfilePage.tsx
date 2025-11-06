@@ -1,10 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { FaPhone, FaWhatsapp, FaEnvelope, FaFacebook, FaInstagram, FaStar } from "react-icons/fa";
+import { FaPhone, FaWhatsapp, FaEnvelope, FaFacebook, FaInstagram, FaStar, FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 export default function BusinessProfilePage() {
   const [activeCategory, setActiveCategory] = useState("All Products");
+  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+  const [email, setEmail] = useState("");
 
   const businessInfo = {
     name: "Amara's Fashion Hub",
