@@ -104,13 +104,13 @@ export default function BusinessProfilePage() {
   ];
 
   const businessHours = [
-    { day: "Monday", time: "09:00 - 18:00" },
-    { day: "Tuesday", time: "09:00 - 18:00" },
-    { day: "Wednesday", time: "09:00 - 18:00" },
-    { day: "Thursday", time: "09:00 - 18:00" },
-    { day: "Friday", time: "09:00 - 18:00" },
-    { day: "Saturday", time: "10:00 - 16:00" },
-    { day: "Sunday", time: "12:00 - 16:00" },
+    { day: "Monday", time: "10:00 - 20:00" },
+    { day: "Tuesday", time: "10:00 - 20:00" },
+    { day: "Wednesday", time: "10:00 - 20:00" },
+    { day: "Thursday", time: "10:00 - 20:00" },
+    { day: "Friday", time: "10:00 - 21:00" },
+    { day: "Saturday", time: "11:00 - 21:00" },
+    { day: "Sunday", time: "12:00 - 19:00" },
   ];
 
   const testimonials = [
