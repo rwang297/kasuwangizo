@@ -351,7 +351,7 @@ export default function BusinessProfilePage() {
         </div>
 
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Products</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">My Dishes</h2>
 
           <div className="flex flex-wrap gap-2 mb-6">
             {categories.map((cat) => (
