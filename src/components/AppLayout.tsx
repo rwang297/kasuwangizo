@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname() || "/";
-  const noSidebarRoutes = new Set(["/", "/login", "/signup", "/marketplace"]);
+  const noSidebarRoutes = new Set(["/", "/login", "/signup", "/marketplace", "/campaign"]);
   const showSidebar = !noSidebarRoutes.has(pathname);
 
   useEffect(() => {
