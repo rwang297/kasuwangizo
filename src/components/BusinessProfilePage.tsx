@@ -395,7 +395,10 @@ export default function BusinessProfilePage() {
                 <div className="p-4">
                   <p className="text-sm text-teal-600 font-medium mb-1">{product.category}</p>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{product.name}</h3>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">{product.description}</p>
+                  <p className="text-gray-600 text-sm mb-2 line-clamp-2">{product.description}</p>
+                  {product.servings && (
+                    <p className="text-xs text-gray-500 mb-3 italic">📦 {product.servings}</p>
+                  )}
 
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-xl font-bold text-gray-900">
