@@ -9,18 +9,18 @@ export default function BusinessProfilePage() {
   const [email, setEmail] = useState("");
 
   const businessInfo = {
-    name: "Amara's Fashion Hub",
-    description: "Fashion & Accessories",
+    name: "Zainab's Kitchen",
+    description: "Homemade Nigerian & African Cuisine",
     details:
-      "We specialize in premium African fashion, traditional wear, and modern accessories. Our mission is to celebrate African culture through beautiful, high-quality clothing that makes you feel confident and stylish.",
+      "Hi! I'm Zainab, and I cook authentic Nigerian and African dishes using fresh, locally-sourced ingredients. Every meal is prepared with love in my kitchen and delivered fresh to your door. My passion is bringing the warmth of home-cooked food to your family. Order now and taste the difference real home cooking makes!",
     location: "Lagos, Nigeria",
     rating: 4.9,
-    reviews: 124,
-    status: "Open until 18:00",
+    reviews: 247,
+    status: "Open 10:00 - 20:00",
     verified: true,
   };
 
-  const categories = ["All Products", "Dresses", "Accessories", "Men's Wear", "Jumpsuits"];
+  const categories = ["All Dishes", "Soups", "Main Courses", "Sides", "Pastries"];
 
   const products = [
     {
