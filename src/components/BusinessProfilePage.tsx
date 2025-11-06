@@ -178,33 +178,33 @@ export default function BusinessProfilePage() {
   const galleryImages = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1595777707802-91d177c547e1?w=300&h=300&fit=crop",
-      alt: "Fashion Collection",
+      src: "https://images.unsplash.com/photo-1609501676725-7186f017a4b1?w=300&h=300&fit=crop",
+      alt: "Jollof Rice",
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=300&h=300&fit=crop",
-      alt: "New Arrivals",
+      src: "https://images.unsplash.com/photo-1618164436241-92473dd7b310?w=300&h=300&fit=crop",
+      alt: "Pepper Soup",
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1539008588435-666a7c3f6f1f?w=300&h=300&fit=crop",
-      alt: "Accessories Display",
+      src: "https://images.unsplash.com/photo-1555939594-58d7cb561182?w=300&h=300&fit=crop",
+      alt: "Fried Rice",
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=300&h=300&fit=crop",
-      alt: "Traditional Wear",
+      src: "https://images.unsplash.com/photo-1630384478049-5f2e4caf5c57?w=300&h=300&fit=crop",
+      alt: "Grilled Suya",
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1584622181563-430f63602d4b?w=300&h=300&fit=crop",
-      alt: "Style Showcase",
+      src: "https://images.unsplash.com/photo-1566280797197-c4b8d77a37ed?w=300&h=300&fit=crop",
+      alt: "Meat Pies",
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1591047990979-bd3e37faf0c8?w=300&h=300&fit=crop",
-      alt: "Designer Collection",
+      src: "https://images.unsplash.com/photo-1584622181563-430f63602d4b?w=300&h=300&fit=crop",
+      alt: "Food Spread",
     },
   ];
 
