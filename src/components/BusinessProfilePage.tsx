@@ -272,7 +272,7 @@ export default function BusinessProfilePage() {
     <div className="bg-gray-50 min-h-screen">
       <div className="relative h-64 bg-gradient-to-r from-gray-400 to-gray-500 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1595777707802-91d177c547e1?w=1200&h=500&fit=crop"
+          src="https://images.unsplash.com/photo-1495001258031-d266bcda0f1e?w=1200&h=500&fit=crop"
           alt="Business Header"
           className="w-full h-full object-cover"
         />
@@ -282,8 +282,8 @@ export default function BusinessProfilePage() {
           <div className="flex gap-4 items-end">
             <div className="w-24 h-24 bg-white rounded-lg overflow-hidden flex items-center justify-center border-4 border-green-500 shadow-lg">
               <img
-                src="https://images.unsplash.com/photo-1595777707802-91d177c547e1?w=150&h=150&fit=crop"
-                alt="Amara's Fashion Hub"
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop"
+                alt="Zainab's Kitchen"
                 className="w-full h-full object-cover"
               />
             </div>
