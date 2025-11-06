@@ -107,6 +107,156 @@ export default function BusinessProfilePage() {
     { day: "Sunday", time: "12:00 - 16:00" },
   ];
 
+  const testimonials = [
+    {
+      id: 1,
+      name: "Chioma Okafor",
+      rating: 5,
+      text: "Absolutely love the quality of the dresses! The craftsmanship is impeccable and I received so many compliments at the wedding. Will definitely order again!",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop",
+      verified: true,
+    },
+    {
+      id: 2,
+      name: "Tunde Adelani",
+      rating: 5,
+      text: "My agbada outfit was perfect! Fast delivery, great communication, and the fit was exactly as described. Customer service is top-notch.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop",
+      verified: true,
+    },
+    {
+      id: 3,
+      name: "Zainab Mohammed",
+      rating: 5,
+      text: "The accessories are stunning and add the perfect touch to any outfit. The attention to detail is amazing. Highly recommended!",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop",
+      verified: true,
+    },
+    {
+      id: 4,
+      name: "Emeka Nwankwo",
+      rating: 4,
+      text: "Great selection and competitive pricing. The jumpsuit I ordered was elegant and comfortable. Will refer my friends!",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop",
+      verified: true,
+    },
+  ];
+
+  const features = [
+    {
+      id: 1,
+      icon: "✓",
+      title: "Premium Quality",
+      description: "Handpicked fabrics and finest craftsmanship for every piece",
+    },
+    {
+      id: 2,
+      icon: "🚚",
+      title: "Fast Delivery",
+      description: "Quick and secure delivery to your doorstep",
+    },
+    {
+      id: 3,
+      icon: "💯",
+      title: "Authentic African Fashion",
+      description: "Celebrate culture with traditional and modern designs",
+    },
+    {
+      id: 4,
+      icon: "🤝",
+      title: "Excellent Service",
+      description: "Friendly support and easy return policies",
+    },
+  ];
+
+  const galleryImages = [
+    {
+      id: 1,
+      src: "https://images.unsplash.com/photo-1595777707802-91d177c547e1?w=300&h=300&fit=crop",
+      alt: "Fashion Collection",
+    },
+    {
+      id: 2,
+      src: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=300&h=300&fit=crop",
+      alt: "New Arrivals",
+    },
+    {
+      id: 3,
+      src: "https://images.unsplash.com/photo-1539008588435-666a7c3f6f1f?w=300&h=300&fit=crop",
+      alt: "Accessories Display",
+    },
+    {
+      id: 4,
+      src: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=300&h=300&fit=crop",
+      alt: "Traditional Wear",
+    },
+    {
+      id: 5,
+      src: "https://images.unsplash.com/photo-1584622181563-430f63602d4b?w=300&h=300&fit=crop",
+      alt: "Style Showcase",
+    },
+    {
+      id: 6,
+      src: "https://images.unsplash.com/photo-1591047990979-bd3e37faf0c8?w=300&h=300&fit=crop",
+      alt: "Designer Collection",
+    },
+  ];
+
+  const blogPosts = [
+    {
+      id: 1,
+      title: "5 Ways to Style Your Ankara This Season",
+      excerpt: "Discover creative ways to mix and match your ankara prints for modern and traditional looks.",
+      image: "https://images.unsplash.com/photo-1595777707802-91d177c547e1?w=300&h=200&fit=crop",
+      date: "March 15, 2024",
+      category: "Style Tips",
+    },
+    {
+      id: 2,
+      title: "The Art of African Fashion: A Heritage Story",
+      excerpt: "Learn about the rich history and cultural significance of African traditional wear.",
+      image: "https://images.unsplash.com/photo-1539008588435-666a7c3f6f1f?w=300&h=200&fit=crop",
+      date: "March 10, 2024",
+      category: "Culture",
+    },
+    {
+      id: 3,
+      title: "Care Tips: Maintaining Your African Fabrics",
+      excerpt: "Essential tips to keep your traditional and modern pieces looking fresh and vibrant.",
+      image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=300&h=200&fit=crop",
+      date: "March 5, 2024",
+      category: "Care Guide",
+    },
+  ];
+
+  const faqs = [
+    {
+      id: 1,
+      question: "What are your delivery times?",
+      answer: "We offer standard delivery within 3-5 business days and express delivery within 1-2 business days to major cities across Nigeria.",
+    },
+    {
+      id: 2,
+      question: "Do you offer custom tailoring?",
+      answer: "Yes! We provide custom tailoring services for all our collections. Please contact us via WhatsApp for custom orders and measurements.",
+    },
+    {
+      id: 3,
+      question: "What is your return policy?",
+      answer: "We accept returns within 14 days of purchase if the item is unworn and in original packaging. Free exchange for sizing issues.",
+    },
+    {
+      id: 4,
+      question: "Are all items authentic?",
+      answer: "Absolutely! All our items are 100% authentic African fabrics and designs. We work directly with trusted artisans and suppliers.",
+    },
+    {
+      id: 5,
+      question: "Do you ship internationally?",
+      answer: "Yes, we ship to select countries worldwide. Contact us for shipping rates and delivery times to your location.",
+    },
+  ];
+
   const filteredProducts =
     activeCategory === "All Products"
       ? products
