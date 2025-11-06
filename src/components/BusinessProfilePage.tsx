@@ -445,12 +445,146 @@ export default function BusinessProfilePage() {
           </div>
         </div>
 
+        <div className="bg-gradient-to-r from-teal-600 to-teal-700 rounded-lg p-8 mb-8">
+          <h2 className="text-3xl font-bold text-white mb-2">What Our Customers Say</h2>
+          <p className="text-teal-100 mb-8">Join hundreds of satisfied customers who love our collections</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.id} className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex gap-3">
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
+                    <div>
+                      <h4 className="font-semibold text-gray-900 text-sm">{testimonial.name}</h4>
+                      {testimonial.verified && (
+                        <span className="text-xs text-green-600 font-medium">✓ Verified</span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+                <div className="flex gap-1 mb-3">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <FaStar key={i} className="text-yellow-400" size={12} />
+                  ))}
+                </div>
+                <p className="text-gray-700 text-sm leading-relaxed">{testimonial.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Us</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((feature) => (
+              <div key={feature.id} className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="text-3xl mb-3">{feature.icon}</div>
+                <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-gray-600 text-sm">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Gallery</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {galleryImages.map((image) => (
+              <div key={image.id} className="aspect-square rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Latest From Our Blog</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {blogPosts.map((post) => (
+              <div key={post.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div className="h-40 bg-gray-200 overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4">
+                  <span className="text-xs font-semibold text-teal-600 bg-teal-100 px-3 py-1 rounded-full">
+                    {post.category}
+                  </span>
+                  <h3 className="text-lg font-bold text-gray-900 mt-3 mb-2 line-clamp-2">{post.title}</h3>
+                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">{post.excerpt}</p>
+                  <p className="text-xs text-gray-500">{post.date}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg p-8 mb-8 text-white">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-bold mb-2">Stay Updated</h2>
+            <p className="text-purple-100 mb-6">Subscribe to our newsletter for exclusive offers, new arrivals, and fashion tips</p>
+            <div className="flex gap-2">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email address"
+                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none"
+              />
+              <button className="px-6 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-purple-50 transition-colors">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-3">
+            {faqs.map((faq) => (
+              <div key={faq.id} className="bg-white rounded-lg shadow-sm overflow-hidden">
+                <button
+                  onClick={() => setExpandedFaq(expandedFaq === faq.id ? null : faq.id)}
+                  className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                >
+                  <h3 className="font-semibold text-gray-900 text-left">{faq.question}</h3>
+                  <span className="text-teal-600">
+                    {expandedFaq === faq.id ? <FaChevronUp /> : <FaChevronDown />}
+                  </span>
+                </button>
+                {expandedFaq === faq.id && (
+                  <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="bg-gray-900 text-white rounded-lg p-8 text-center">
           <div className="flex items-center justify-center gap-2 mb-2">
             <span className="text-2xl">🏪</span>
             <span className="text-2xl font-bold">MSME Hub</span>
           </div>
-          <p className="text-gray-300 text-sm">This business is powered by MSME Hub - Africa's premier marketplace for small businesses</p>
+          <p className="text-gray-300 text-sm mb-4">This business is powered by MSME Hub - Africa's premier marketplace for small businesses</p>
+          <div className="flex justify-center gap-6 text-sm text-gray-400">
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-white transition-colors">Contact Us</a>
+          </div>
         </div>
       </div>
     </div>
