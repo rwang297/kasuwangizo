@@ -5,8 +5,25 @@ import { FaPhone, FaWhatsapp, FaEnvelope, FaFacebook, FaInstagram, FaStar, FaChe
 
 export default function BusinessProfilePage() {
   const [activeCategory, setActiveCategory] = useState("All Products");
-  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
   const [email, setEmail] = useState("");
+  const [comments, setComments] = useState([
+    {
+      id: 1,
+      name: "Chioma Okafor",
+      date: "3 days ago",
+      text: "Your Jollof rice is absolutely incredible! The seasoning is perfect and I love how fresh everything tastes. Keep it up! 💕",
+      likes: 12,
+    },
+    {
+      id: 2,
+      name: "Tunde Adelani",
+      date: "1 week ago",
+      text: "Best meat pies in Lagos! I've been ordering every Saturday for my family.",
+      likes: 8,
+    },
+  ]);
+  const [newComment, setNewComment] = useState("");
+  const [commentName, setCommentName] = useState("");
 
   const businessInfo = {
     name: "Zainab's Kitchen",
