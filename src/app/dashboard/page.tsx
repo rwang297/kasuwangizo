@@ -2,9 +2,11 @@
 
 import React from "react";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import AddListingModal from "@/components/AddListingModal";
 
 export default function DashboardPage() {
+  const router = useRouter();
   const [showAddListing, setShowAddListing] = useState(false);
   const [listings, setListings] = useState([]);
 
@@ -148,7 +150,7 @@ export default function DashboardPage() {
           <button className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-pink-500 text-white rounded">Add Product</button>
         </div>
 
-        <div className="bg-white border rounded-lg p-6 shadow-sm text-center">
+        <div className="bg-white border rounded-lg p-6 shadow-sm text-center cursor-pointer hover:shadow-md transition-shadow" onClick={() => router.push('/campaign')}>
           <div className="w-12 h-12 rounded-full bg-green-500 mx-auto mb-3 flex items-center justify-center text-white">⚡</div>
           <div className="font-semibold text-gray-700">Share URL Link</div>
           <div className="text-sm text-gray-500 mb-4">Copy & Share Unique URL</div>
