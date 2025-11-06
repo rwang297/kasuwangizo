@@ -238,28 +238,28 @@ export default function BusinessProfilePage() {
   const faqs = [
     {
       id: 1,
-      question: "What are your delivery times?",
-      answer: "We offer standard delivery within 3-5 business days and express delivery within 1-2 business days to major cities across Nigeria.",
+      question: "How quickly can you deliver?",
+      answer: "I deliver within 30-45 minutes during business hours (10:00 AM - 8:00 PM). Orders placed after 6:00 PM are prepared for next morning delivery.",
     },
     {
       id: 2,
-      question: "Do you offer custom tailoring?",
-      answer: "Yes! We provide custom tailoring services for all our collections. Please contact us via WhatsApp for custom orders and measurements.",
+      question: "Can I order large quantities for events?",
+      answer: "Absolutely! For parties, weddings, and corporate events, I offer bulk orders with special pricing. Please WhatsApp me your requirements and preferred date at least 3 days in advance.",
     },
     {
       id: 3,
-      question: "What is your return policy?",
-      answer: "We accept returns within 14 days of purchase if the item is unworn and in original packaging. Free exchange for sizing issues.",
+      question: "Are your meals frozen or fresh?",
+      answer: "Everything is prepared fresh in my kitchen on the day of delivery. No frozen meals ever. I cook fresh daily to ensure maximum quality and taste.",
     },
     {
       id: 4,
-      question: "Are all items authentic?",
-      answer: "Absolutely! All our items are 100% authentic African fabrics and designs. We work directly with trusted artisans and suppliers.",
+      question: "Can you customize dishes for dietary preferences?",
+      answer: "Yes! I can adjust spice levels, exclude certain ingredients, or create custom meals based on your preferences. Just let me know via WhatsApp.",
     },
     {
       id: 5,
-      question: "Do you ship internationally?",
-      answer: "Yes, we ship to select countries worldwide. Contact us for shipping rates and delivery times to your location.",
+      question: "What packaging do you use?",
+      answer: "I use food-grade, eco-friendly containers that keep meals hot and fresh. Everything is properly packaged to arrive in perfect condition.",
     },
   ];
 
