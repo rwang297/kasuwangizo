@@ -564,26 +564,53 @@ export default function BusinessProfilePage() {
         </div>
 
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-          <div className="space-y-3">
-            {faqs.map((faq) => (
-              <div key={faq.id} className="bg-white rounded-lg shadow-sm overflow-hidden">
-                <button
-                  onClick={() => setExpandedFaq(expandedFaq === faq.id ? null : faq.id)}
-                  className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
-                >
-                  <h3 className="font-semibold text-gray-900 text-left">{faq.question}</h3>
-                  <span className="text-teal-600">
-                    {expandedFaq === faq.id ? <FaChevronUp /> : <FaChevronDown />}
-                  </span>
-                </button>
-                {expandedFaq === faq.id && (
-                  <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Comments & Reviews</h2>
+
+          <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Leave a Comment</h3>
+            <div className="space-y-3">
+              <input
+                type="text"
+                value={commentName}
+                onChange={(e) => setCommentName(e.target.value)}
+                placeholder="Your name"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-600"
+              />
+              <textarea
+                value={newComment}
+                onChange={(e) => setNewComment(e.target.value)}
+                placeholder="Share your thoughts about our food..."
+                rows={3}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 resize-none"
+              />
+              <button
+                onClick={handleAddComment}
+                className="w-full bg-teal-600 text-white py-2 rounded-lg font-medium hover:bg-teal-700 transition-colors"
+              >
+                Post Comment
+              </button>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            {comments.length === 0 ? (
+              <p className="text-gray-500 text-center py-8">No comments yet. Be the first to leave a comment!</p>
+            ) : (
+              comments.map((comment) => (
+                <div key={comment.id} className="bg-white rounded-lg shadow-sm p-6">
+                  <div className="flex items-start justify-between mb-2">
+                    <div>
+                      <h4 className="font-semibold text-gray-900">{comment.name}</h4>
+                      <p className="text-xs text-gray-500">{comment.date}</p>
+                    </div>
                   </div>
-                )}
-              </div>
-            ))}
+                  <p className="text-gray-700 leading-relaxed mb-3">{comment.text}</p>
+                  <button className="text-sm text-teal-600 hover:text-teal-700 font-medium">
+                    👍 {comment.likes}
+                  </button>
+                </div>
+              ))
+            )}
           </div>
         </div>
 
