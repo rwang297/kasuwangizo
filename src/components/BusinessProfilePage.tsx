@@ -252,33 +252,20 @@ export default function BusinessProfilePage() {
     },
   ];
 
-  const faqs = [
-    {
-      id: 1,
-      question: "How quickly can you deliver?",
-      answer: "I deliver within 30-45 minutes during business hours (10:00 AM - 8:00 PM). Orders placed after 6:00 PM are prepared for next morning delivery.",
-    },
-    {
-      id: 2,
-      question: "Can I order large quantities for events?",
-      answer: "Absolutely! For parties, weddings, and corporate events, I offer bulk orders with special pricing. Please WhatsApp me your requirements and preferred date at least 3 days in advance.",
-    },
-    {
-      id: 3,
-      question: "Are your meals frozen or fresh?",
-      answer: "Everything is prepared fresh in my kitchen on the day of delivery. No frozen meals ever. I cook fresh daily to ensure maximum quality and taste.",
-    },
-    {
-      id: 4,
-      question: "Can you customize dishes for dietary preferences?",
-      answer: "Yes! I can adjust spice levels, exclude certain ingredients, or create custom meals based on your preferences. Just let me know via WhatsApp.",
-    },
-    {
-      id: 5,
-      question: "What packaging do you use?",
-      answer: "I use food-grade, eco-friendly containers that keep meals hot and fresh. Everything is properly packaged to arrive in perfect condition.",
-    },
-  ];
+  const handleAddComment = () => {
+    if (newComment.trim() && commentName.trim()) {
+      const newCommentObj = {
+        id: comments.length + 1,
+        name: commentName,
+        date: "just now",
+        text: newComment,
+        likes: 0,
+      };
+      setComments([newCommentObj, ...comments]);
+      setNewComment("");
+      setCommentName("");
+    }
+  };
 
   const filteredProducts =
     activeCategory === "All Products"
