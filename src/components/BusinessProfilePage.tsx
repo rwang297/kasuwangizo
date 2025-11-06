@@ -151,27 +151,27 @@ export default function BusinessProfilePage() {
   const features = [
     {
       id: 1,
-      icon: "✓",
-      title: "Premium Quality",
-      description: "Handpicked fabrics and finest craftsmanship for every piece",
+      icon: "👨‍🍳",
+      title: "Cooked Fresh Daily",
+      description: "Everything prepared in my kitchen the same day - no frozen meals, just authentic home cooking",
     },
     {
       id: 2,
       icon: "🚚",
-      title: "Fast Delivery",
-      description: "Quick and secure delivery to your doorstep",
+      title: "Quick Delivery",
+      description: "Hot meals delivered to your door within 30-45 minutes of order",
     },
     {
       id: 3,
-      icon: "💯",
-      title: "Authentic African Fashion",
-      description: "Celebrate culture with traditional and modern designs",
+      icon: "🌿",
+      title: "Natural Ingredients",
+      description: "No artificial additives. Only fresh spices, vegetables, and locally sourced proteins",
     },
     {
       id: 4,
-      icon: "🤝",
-      title: "Excellent Service",
-      description: "Friendly support and easy return policies",
+      icon: "❤️",
+      title: "Made with Love",
+      description: "I cook like I'm serving my own family - with care, attention, and authentic traditional recipes",
     },
   ];
 
